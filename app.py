@@ -1,5 +1,3 @@
-import gradio as gr
-import random
 from smolagents import GradioUI, CodeAgent, HfApiModel
 
 # Import our custom tools from their modules
