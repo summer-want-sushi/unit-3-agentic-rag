@@ -7,7 +7,7 @@ from tools import DuckDuckGoSearchTool, WeatherInfoTool, HubStatsTool
 from retriever import load_guest_dataset
 
 # Initialize the Hugging Face model
-model = HfApiModel()
+model = HfApiModel(max_new_tokens=512)
 
 # Initialize the web search tool
 search_tool = DuckDuckGoSearchTool()
