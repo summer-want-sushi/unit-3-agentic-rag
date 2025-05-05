@@ -23,7 +23,7 @@ class GuestInfoRetrieverTool(Tool):
     def forward(self, query: str):
         results = self.retriever.get_relevant_documents(query)
         if results:
-            return "\n\n".join([doc.page_content for doc in results[:3]])
+            return results[0].page_content
         else:
             return "No matching guest information found."
 
