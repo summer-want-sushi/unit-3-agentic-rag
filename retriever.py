@@ -50,4 +50,10 @@ def load_guest_dataset():
     return GuestInfoRetrieverTool(docs)
 
 
+if __name__ == "__main__":
+    from datasets import load_dataset
+    dataset = load_dataset("agents-course/unit3-invitees", split="train")
+    dataset.save_to_disk("local_guest_dataset")
+
+
 
