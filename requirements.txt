@@ -3,3 +3,4 @@ smolagents
 langchain-community 
 rank_bm25
 duckduckgo-search
+gradio
