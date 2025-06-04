@@ -1,7 +1,7 @@
 from smolagents import Tool
 from langchain_community.retrievers import BM25Retriever
 from langchain.docstore.document import Document
-import datasets
+from datasets import load_from_disk
 
 
 class GuestInfoRetrieverTool(Tool):
@@ -29,8 +29,8 @@ class GuestInfoRetrieverTool(Tool):
 
 
 def load_guest_dataset():
-    # Load the dataset
-    guest_dataset = datasets.load_dataset("agents-course/unit3-invitees", split="train")
+   # Load the locally saved dataset
+    guest_dataset = load_from_disk("local_guest_dataset")
 
     # Convert dataset entries into Document objects
     docs = [
