@@ -30,4 +30,13 @@ alfred = CodeAgent(
 )
 
 if __name__ == "__main__":
-    GradioUI(alfred).launch()
+    print("🕵️ Alfred is ready! Type your questions below.")
+    while True:
+        query = input("You: ")
+        if query.lower() in {"exit", "quit"}:
+            print("Goodbye!")
+            break
+        response = alfred.run(query)
+        print("\nAlfred's Response:")
+        print(response)
+        print("-" * 40)
